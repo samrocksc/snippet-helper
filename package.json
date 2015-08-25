@@ -1,0 +1,29 @@
+{
+  "name": "snippet-helper",
+  "version": "0.0.1",
+  "description": "Helps me remember snippets of things",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samrocksc/snippet-helper.git"
+  },
+  "keywords": [
+    "helper"
+  ],
+  "author": "Sam C.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samrocksc/snippet-helper/issues"
+  },
+  "homepage": "https://github.com/samrocksc/snippet-helper#readme",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "hapi": "^9.0.3",
+    "path": "^0.11.14",
+    "pg": "^4.4.1",
+    "underscore": "^1.8.3"
+  }
+}
