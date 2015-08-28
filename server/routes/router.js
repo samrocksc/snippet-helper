@@ -1,9 +1,3 @@
-//includes
-var query = require('pg-query');
-
-//setup postgres
-query.connectionParameters = 'postgres://samrocksc:@localhost:5432/snippet_helper';
-
 var createIndex = require('../handlers/createIndex.js');
 var insertRecord = require('../handlers/insertRecord.js');
 var postRecord = require('../handlers/postRecord.js');

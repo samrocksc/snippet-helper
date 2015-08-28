@@ -1,7 +1,8 @@
 //includes
 var query = require('pg-query');
 //setup pg-query
-query.connectionParameters = 'postgres://samrocksc:@localhost:5432/snippet_helper';
+var config = require('../../config');
+query.connectionParameters = config.pg.server;
 
 //i need to learn how to break down
 exports.index = function(request, reply) {
