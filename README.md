@@ -21,14 +21,17 @@ Todo
 File Structure
 ----
 * index.js
-* gulpfile.js - primarily runs nodemon right now, no frontend
+* package.json - the usual
+* gulpfile.js - primarily runs nodemon right now, no frontend builds yet.
 * config.js - contains the basic settings and variables
-* /build - this is where I will plaste the app
 * /server - the base of the api and router
   * /routes
-    * index.js - the basic routes
+    * index.js - the basic routes(imports handlers)
   * /models
     * database.js - the basic database setup
+  * /handlers - contains separate file functions indexed for calls into routes.
+* /src
+* /build - this is where I will plaste the app
 
 Endpoints
 -----
