@@ -7,6 +7,9 @@ query.connectionParameters = 'postgres://samrocksc:@localhost:5432/snippet_helpe
 var createIndex = require('../handlers/createIndex.js');
 var insertRecord = require('../handlers/insertRecord.js');
 var postRecord = require('../handlers/postRecord.js');
+var updateRecord = require('../handlers/updateRecord');
+var retrieveRecord = require('../handlers/retrieveRecord');
+var deleteRecord = require('../handlers/deleteRecord');
 
 module.exports = [
   {
@@ -24,7 +27,22 @@ module.exports = [
   {
     //creating post data to insert a record endpoint
     method: 'POST',
-    path: '/api',
+    path: '/api/',
     handler: postRecord.index
+  },
+  {
+    method: 'PUT',
+    path: '/api/',
+    handler: updateRecord.index
+  },
+  {
+    method: 'DELETE',
+    path: '/api/{b}',
+    handler: deleteRecord.index
+  },
+  {
+    method: 'GET',
+    path: '/api',
+    handler: retrieveRecord.js
   }
 ];
