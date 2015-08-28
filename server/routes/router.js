@@ -1,19 +1,30 @@
-//all of the includes
+//includes
 var query = require('pg-query');
-var _ = require('lodash');
 
-//CRUD TIME!
+//setup postgres
+query.connectionParameters = 'postgres://samrocksc:@localhost:5432/snippet_helper';
 
+var createIndex = require('../handlers/createIndex.js');
+var insertRecord = require('../handlers/insertRecord.js');
+var postRecord = require('../handlers/postRecord.js');
 
-
-//CREATE
-query.connectionParameters = 'postgres://samrocksc:@localhost:5432/todo';
-
-//READ
-
-//UPDATE
-
-//DELETE
-
-//exports
-module.exports = routes
+module.exports = [
+  {
+    //creating my index page
+    method: 'GET',
+    path: '/',
+    handler: createIndex.index
+  },
+  {
+    //just a vanilla get that inserts a record to test database
+    method: 'GET',
+    path: '/api2',
+    handler: insertRecord.index
+  },
+  {
+    //creating post data to insert a record endpoint
+    method: 'POST',
+    path: '/api',
+    handler: postRecord.index
+  }
+];

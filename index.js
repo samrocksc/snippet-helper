@@ -1,18 +1,28 @@
+//Modules
 var Hapi = require('hapi');
-var pg = require('pg');
 var Path = require('path');
 var query = require('pg-query');
+
+//Exports
 var routes = require('./server/routes/router.js');
 
-query.connectionParameters = 'postgres://samrocksc:@localhost:5432/todo';
+//query params
+query.connectionParameters = 'postgres://samrocksc:@localhost:5432/snippet_helper';
 
+//create the server
 var server = new Hapi.Server();
 
+//Define the server
 server.connection({
   port: 3000,
   host: 'localhost',
   labels: ['web']
 });
+
+//Include all of our routes
+for (var route in routes) {
+  server.route(routes[route]);
+}
 
 
 
