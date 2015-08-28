@@ -1,3 +1,11 @@
-var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/';
-
-module.exports = connectionString;
+module.expots = {
+  basic: {
+    name: 'Snippet Helper',
+    description: 'Just a simple snippet helper for a new developer.'
+  },
+  server: {
+    host: 'localhost',
+    port: '3000',
+    email: ''
+  }
+};
