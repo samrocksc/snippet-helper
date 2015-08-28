@@ -21,8 +21,8 @@ module.exports = [
   {
     //just a vanilla get that inserts a record to test database
     method: 'GET',
-    path: '/api2',
-    handler: insertRecord.index
+    path: '/api',
+    handler: retrieveRecord.index
   },
   {
     //creating post data to insert a record endpoint
@@ -39,10 +39,5 @@ module.exports = [
     method: 'DELETE',
     path: '/api/{b}',
     handler: deleteRecord.index
-  },
-  {
-    method: 'GET',
-    path: '/api',
-    handler: retrieveRecord.js
   }
 ];
