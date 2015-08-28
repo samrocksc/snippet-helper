@@ -5,3 +5,4 @@ var client = new pg.Client(connectionString);
 client.connect();
 var query = client.query('CREATE TABLE items(id SERIAL PRIMARY KEY, description TEXT, content TEXT, complete BOOLEAN)');
 query.on('end', function() { client.end(); });
+ 
